@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, AlertCircle, CheckCircle } from 'lucide-react';
 
-const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
-
-
 const Contact: React.FC = () => {
   const [formState, setFormState] = useState({
     name: '',
@@ -18,7 +15,7 @@ const Contact: React.FC = () => {
     setStatus('sending');
 
     const formData = new FormData();
-    formData.append("access_key", WEB3FORMS_KEY);
+    formData.append("access_key", "84933a9e-2a54-4b1a-bf88-139482dd50d4");
     formData.append("name", formState.name);
     formData.append("email", formState.email);
     formData.append("message", formState.message);
@@ -64,13 +61,13 @@ const Contact: React.FC = () => {
             </p>
             
             <div className="space-y-6 flex flex-col items-center md:items-start">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-purple-900/30 flex items-center justify-center border border-purple-500/30">
+              <div className="flex items-center gap-4 w-full justify-center md:justify-start">
+                <div className="w-12 h-12 rounded-full bg-purple-900/30 flex items-center justify-center border border-purple-500/30 flex-shrink-0">
                   <Mail className="text-purple-400" />
                 </div>
-                <div className="text-left">
+                <div className="text-left overflow-hidden">
                   <h4 className="font-bold">Email Me</h4>
-                  <p className="text-gray-400 break-all">mrigankdhanuka11@gmail.com</p>
+                  <p className="text-gray-400 text-sm sm:text-base break-all">mrigankdhanuka11@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -80,7 +77,7 @@ const Contact: React.FC = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-panel p-6 md:p-8 rounded-2xl"
+            className="glass-panel p-5 md:p-8 rounded-2xl"
           >
             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
               <div>

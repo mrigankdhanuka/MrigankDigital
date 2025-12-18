@@ -44,7 +44,7 @@ const About: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {cards.map((card, index) => (
             <motion.div
               key={index}
@@ -52,12 +52,12 @@ const About: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="glass-panel p-6 md:p-8 rounded-2xl relative overflow-hidden group hover:bg-white/10 transition-colors"
+              className="glass-panel p-5 md:p-8 rounded-2xl relative overflow-hidden group hover:bg-white/10 transition-colors"
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${card.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
               
               <div className="relative z-10">
-                <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br ${card.color} flex items-center justify-center mb-6 shadow-lg`}>
+                <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br ${card.color} flex items-center justify-center mb-4 md:mb-6 shadow-lg`}>
                   <card.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
                 </div>
                 
@@ -73,7 +73,7 @@ const About: React.FC = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-8 md:mt-12 glass-panel p-6 md:p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left"
+          className="mt-8 md:mt-12 glass-panel p-5 md:p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left"
         >
           <div className="flex flex-col md:flex-row items-center gap-4">
             <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-purple-500 shadow-lg shadow-purple-500/20">
@@ -88,8 +88,8 @@ const About: React.FC = () => {
               <p className="text-gray-400 text-sm">Let's create something extraordinary.</p>
             </div>
           </div>
-          <div className="flex items-center gap-2 text-purple-400 bg-purple-900/20 px-4 py-2 rounded-lg border border-purple-500/20 text-sm md:text-base">
-            <Mail className="w-4 h-4" />
+          <div className="flex items-center gap-2 text-purple-400 bg-purple-900/20 px-4 py-2 rounded-lg border border-purple-500/20 text-xs sm:text-sm md:text-base w-full sm:w-auto justify-center">
+            <Mail className="w-4 h-4 flex-shrink-0" />
             <span className="break-all">{PERSONAL_INFO.email}</span>
           </div>
         </motion.div>

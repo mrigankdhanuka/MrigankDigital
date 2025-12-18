@@ -16,7 +16,7 @@ const Skills: React.FC = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8">
           {SKILLS.map((skillGroup, idx) => (
             <motion.div
               key={idx}
@@ -24,7 +24,7 @@ const Skills: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="glass-panel p-6 rounded-2xl border border-white/5"
+              className="glass-panel p-5 sm:p-6 rounded-2xl border border-white/5"
             >
               <div className="flex items-center gap-3 mb-6">
                 <skillGroup.icon className="w-6 h-6 text-pink-500" />
@@ -35,7 +35,7 @@ const Skills: React.FC = () => {
                 {skillGroup.items.map((skill, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1.5 bg-slate-800/80 rounded-lg text-xs md:text-sm text-gray-300 border border-slate-700 hover:border-purple-500 hover:text-white hover:bg-purple-900/20 transition-all cursor-default"
+                    className="px-2.5 py-1.5 bg-slate-800/80 rounded-lg text-xs md:text-sm text-gray-300 border border-slate-700 hover:border-purple-500 hover:text-white hover:bg-purple-900/20 transition-all cursor-default"
                   >
                     {skill}
                   </span>

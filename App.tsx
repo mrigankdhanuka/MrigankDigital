@@ -13,6 +13,7 @@ const App: React.FC = () => {
   return (
     <HashRouter>
       <div className="relative min-h-screen text-white selection:bg-purple-500 selection:text-white">
+        
         {/* Background 3D Layer */}
         <div className="fixed inset-0 z-0 pointer-events-none">
           <Suspense fallback={null}>
@@ -25,23 +26,23 @@ const App: React.FC = () => {
           <Navbar />
           
           <main className="flex-grow">
-            <section id="home">
+            <section id="home" className="scroll-mt-20">
               <Hero />
             </section>
             
-            <section id="about">
+            <section id="about" className="scroll-mt-24">
               <About />
             </section>
             
-            <section id="skills">
+            <section id="skills" className="scroll-mt-24">
               <Skills />
             </section>
             
-            <section id="portfolio">
+            <section id="portfolio" className="scroll-mt-24">
               <Portfolio />
             </section>
             
-            <section id="contact">
+            <section id="contact" className="scroll-mt-24">
               <Contact />
             </section>
           </main>

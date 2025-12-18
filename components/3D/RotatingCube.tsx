@@ -3,6 +3,17 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { MeshDistortMaterial, RoundedBox, Float } from '@react-three/drei';
 import * as THREE from 'three';
 
+// Fix for missing JSX intrinsic elements in TypeScript
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      ambientLight: any;
+      directionalLight: any;
+      pointLight: any;
+    }
+  }
+}
+
 const Cube = () => {
   const mesh = useRef<THREE.Mesh>(null);
 
